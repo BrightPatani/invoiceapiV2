@@ -9,7 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::prefix('v1')->group(function () {
+Route::prefix('v2')->group(function () {
 
     Route::get('/invoices', [InvoiceController::class, 'getAllInvoices']);
     Route::post('/invoices', [InvoiceController::class, 'createInvoice']);
